@@ -1,10 +1,12 @@
 <html>
-<head><title>Chat Client</title></head>
+<head><title>Chat Client</title>
+<link rel="stylesheet" href="style.css"></head>
 <body>
-<h3>Chat with Admin</h3>
+<div class = "logincentered">
+<h3 style="color:white">Chat with Admin</h3>
 <form method="POST">
-Enter Message: <input type="text" name="txtMessage" size="20">
-<input type="submit" name="btnSend" value="send"><br/><br/>
+<p style="color:white">Enter Message: <input type="text" name="txtMessage" size="20"></p>
+<input type="submit" name="btnSend" value="send" class="button"><br/><br/>
 
 <?php
   $host = "127.0.0.1";
@@ -24,5 +26,5 @@ Enter Message: <input type="text" name="txtMessage" size="20">
   }
 ?>
 
-  <textarea rows="10" cols="45"><?php echo @$reply; ?></textarea>
+  <textarea rows="10" cols="45"><?php echo @$reply; ?></textarea></div>
 </form>
