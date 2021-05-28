@@ -9,20 +9,30 @@
 ?>
 
 <html>
-<head><title>Log-In</title></head>
+<head>
+	<title>Log-In</title>
+	<link rel="stylesheet" href="style.css">
+</head>
 <body>
 
-<a href= "client.php">Chat </a>
-&nbsp; &nbsp;<a href= "add.php">Sign up here </a>
+<ul>
+  <li><a href= "client.php">Chat </a></li>
+  <li><a href= "add.php">Sign up here </a></li>
+</ul>
 
-<center>
-<h3>Welcome to Employee's Log-In Panel</h3>
-<table border="2" bgcolor="#dddddd">
+<div class = "logincentered"><center>
+<h1>Welcome to Employee's Log-In Panel</h1><br><br>
+<table opacity= 0%>
 <tr>
 <form name="frm" method="post" action="check.php">
-<td>Username:</td><td><input type="text" name="username"/></td>
-<tr><td>Password: </td><td><input type="password" name="pass"/></td></tr>
-<tr><td colspan="2" align="center"><input type="submit" value="Login" name="loginBtn"/></td></tr>
+<td><h3 style="color:white">Username:</h3></td><td><input type="text" name="username"/></td>
+</tr>
+<tr>
+<td><h3 style="color:white">Password:</h3></td><td><input type="password" name="pass"/></td>
+</tr>
+<tr>
+<td colspan="2" align="center"><br><input type="submit" value="Login" name="loginBtn" class="button"/></td>
+</tr>
 </form>
 </table>
 <?php
@@ -35,6 +45,8 @@ if(isset($_GET["error"])) {
 }
  
 ?>
+</center>
+<div>
 </body>
 </html>
 
