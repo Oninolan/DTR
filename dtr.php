@@ -48,12 +48,12 @@ Date of Effectivity: &nbsp;
 		 echo "<tr><th>/</th><th>Day</th><th>Time In</th><th>Time Out</th><tr>";
 		 for($day=0; $day<=5; $day++) {
 		   echo "<tr><td><input type='checkbox' id = 'work$day' name='work$day' value='$dayArray[$day]'></td><td align = 'center'>".$dayArray[$day]. "</td>".
-		        "<td align='center'><select id = 'in$day' name='in$day'><option></option>";
+		        "<td align='center'><select id = 'in$day' name='in$day' required disabled><option></option>";
 				      for($timein=0; $timein<=24; $timein++) {
 					     echo "<option value=$timein>$timein</option>";
 					  }
            echo "</select></td>";
-		   echo "<td align='center'><select id = 'out$day' name='out$day'><option></option>";
+		   echo "<td align='center'><select id = 'out$day' name='out$day' required disabled><option></option>";
 		              for($timeout=0; $timeout<=24; $timeout++){
 					    echo "<option value=$timeout>$timeout</option>";
 					  }
@@ -67,6 +67,17 @@ Date of Effectivity: &nbsp;
 	<input type="reset">
   </form>
   </center>
+  
+  <script>
+	<?php
+	for($day=0; $day<=5; $day++) {
+		echo  "document.getElementById('work$day').onchange = function() {";
+		echo  "document.getElementById('in$day').disabled = !this.checked;";
+		echo  "document.getElementById('out$day').disabled = !this.checked;";
+		echo  "};";
+	}
+	?>
+</script>
 
 </body>
 </html>

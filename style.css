@@ -78,21 +78,22 @@ td{
     vertical-align: middle
 }
 
+
+.button {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 7px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  border: 2px solid white;
+  border-radius: 15px;
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color: white;
+  color: #262249;
+}
   
-  .button {
-    background-color: transparent;
-    border: 2px solid white;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    font-size: 16px;
-    cursor: pointer;
-    border: 2px solid white;
-    border-radius: 15px;
-    transition-duration: 0.4s;
-  }
-  
-  .button:hover {
-    background-color: white;
-    color: #262249;
-  }

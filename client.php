@@ -6,7 +6,7 @@
 <h3 style="color:white">Chat with Admin</h3>
 <form method="POST">
 <p style="color:white">Enter Message: <input type="text" name="txtMessage" size="20"></p>
-<input type="submit" name="btnSend" value="send" class="button"><br/><br/>
+<center><input type="submit" name="btnSend" value="send" class="button"></center><br/><br/>
 
 <?php
   $host = "127.0.0.1";
