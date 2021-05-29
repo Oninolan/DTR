@@ -26,6 +26,7 @@
 
 
 <center>
+<div style='color:white'><br><br>
 <h2>Work Schedule </h2>
 <h3>[ Online Daily Time Record ]</h3>
 <form action="dtrprocess.php" method="post">
@@ -43,9 +44,9 @@ Date of Effectivity: &nbsp;
 	  <?php
 	     $dayArray = array("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
 		 echo "<table width='40%'>";
-		 echo "<tr><th>/</th><th>Day</th><th>Time In</th><th>Time Out</th><tr>";
+		 echo "<tr style='color:white'><th>/</th><th>Day</th><th>Time In</th><th>Time Out</th><tr>";
 		 for($day=0; $day<=5; $day++) {
-		   echo "<tr><td><input type='checkbox' id = 'work$day' name='work$day' value='$dayArray[$day]'></td><td align = 'center'>".$dayArray[$day]. "</td>".
+		   echo "<tr style='color:white'><td><input type='checkbox' id = 'work$day' name='work$day' value='$dayArray[$day]'></td><td align = 'center'>".$dayArray[$day]. "</td>".
 		        "<td align='center'><select id = 'in$day' name='in$day' required disabled><option></option>";
 				      for($timein=0; $timein<=24; $timein++) {
 					     echo "<option value=$timein>$timein</option>";
@@ -60,9 +61,9 @@ Date of Effectivity: &nbsp;
 		 echo "</table>";
 	  ?>
 	<br />  
-	<input type="submit" name="enter" value="Save">
-	<input formaction = 'dtrview.php' type="submit" name="click" value = "View"> 
-	<input type="reset">
+	<input type="submit" name="enter" value="Save" class="button">
+	<input formaction = 'dtrview.php' type="submit" name="click" value = "View" class="button"> 
+	<input type="reset" class="button">
   </form>
   </center>
   
@@ -76,7 +77,7 @@ Date of Effectivity: &nbsp;
 	}
 	?>
 </script>
-
+</div>
 </body>
 </html>
 
