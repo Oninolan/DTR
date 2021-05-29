@@ -10,21 +10,19 @@
 
 <html>
 <head>
-
+<link rel="stylesheet" href="style.css">
 <title>Employee DTR</title>
 </head>
-<body bgcolor='#CCCCCC'>
 
-<?php
-	error_reporting(E_ALL ^ E_NOTICE);
-	echo "Hi ". ucwords($_SESSION["getLogin"]);
-?>
-
-&nbsp; &nbsp;<a href= "employeeChat.php">Chat </a>
-
-&nbsp; &nbsp;<a href= "modify.php">View Account </a>
-
-&nbsp; &nbsp;<a href= "logout.php">Logout </a>
+<ul>
+	<?php
+		error_reporting(E_ALL ^ E_NOTICE);
+		echo "<li style='padding: 14px 16px; float:left'>Hi ". ucwords($_SESSION["getLogin"])."</li>";
+	?>
+	<li><a href= "logout.php">Logout </a></li>
+	<li><a href= "employeeChat.php">Chat </a></li>
+	<li><a href= "modify.php">View Account </a></li>
+</ul>
 
 
 <center>

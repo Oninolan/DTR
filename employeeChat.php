@@ -10,7 +10,8 @@
 
 
 <html>
-<head><title>Chat Client</title></head>
+<head><title>Chat Client</title>
+<link rel="stylesheet" href="style.css"></head>
 <body>
 
 <?php
